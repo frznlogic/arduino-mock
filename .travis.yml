@@ -6,4 +6,5 @@ before_install:
  - sudo apt-get install -qq astyle
 script:
  - cd test && make test
+ - astyle -X --style=google -n ../**/*.cc ../include/**/*.h | grep Formatted
  - ../script/formatting_checker.sh
