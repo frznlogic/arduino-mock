@@ -3,7 +3,7 @@
 
 static ArduinoMock* arduinoMock = NULL;
 ArduinoMock* arduinoMockInstance() {
-    if(!arduinoMock) {
+      if(!arduinoMock) {
         arduinoMock = new ArduinoMock();
     }
     return arduinoMock;
