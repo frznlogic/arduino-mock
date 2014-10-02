@@ -4,4 +4,6 @@ compiler:
 before_install:
  - sudo apt-get update -qq
  - sudo apt-get install -qq astyle
-script: cd test && make test && ../script/formatting_checker.sh
+script:
+ - cd test && make test
+ - ../script/formatting_checker.sh
