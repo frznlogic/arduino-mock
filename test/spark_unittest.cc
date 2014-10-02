@@ -13,9 +13,9 @@ Spark_ Spark;
 using ::testing::StrCaseEq;
 
 TEST(publish, normal) {
-  SparkMock* sparkMock = sparkMockInstance();
-  EXPECT_CALL(*sparkMock,
-              publish(StrCaseEq("test"), StrCaseEq("test")));
-  Spark.publish("test", "test");
-  releaseSparkMock();
+    SparkMock* sparkMock = sparkMockInstance();
+    EXPECT_CALL(*sparkMock,
+                publish(StrCaseEq("test"), StrCaseEq("test")));
+    Spark.publish("test", "test");
+    releaseSparkMock();
 }

@@ -16,10 +16,10 @@ void releaseArduinoMock() {
 }
 
 void pinMode(uint8_t a, uint8_t b) {
-    arduinoMock->pinMode(a,b);
+    arduinoMock->pinMode(a, b);
 }
 void digitalWrite(uint8_t a, uint8_t b) {
-    arduinoMock->digitalWrite(a,b);
+    arduinoMock->digitalWrite(a, b);
 }
 
 int digitalRead(uint8_t a) {
@@ -34,13 +34,15 @@ void analogReference(uint8_t mode) {
 }
 
 void analogWrite(uint8_t a, int b) {
-    arduinoMock->analogWrite(a,b);
+    arduinoMock->analogWrite(a, b);
 }
 
 unsigned long millis(void) {
     return arduinoMock->millis();
 }
-unsigned long micros(void) {return 0;}
+unsigned long micros(void) {
+    return 0;
+}
 void delay(unsigned long a) {
     arduinoMock->delay(a);
 }

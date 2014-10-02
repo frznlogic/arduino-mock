@@ -18,5 +18,5 @@ void releaseSparkMock() {
 }
 
 void Spark_::publish(const char *eventName, const char *data) {
-  gSparkMock->publish(eventName, data);
+    gSparkMock->publish(eventName, data);
 }

@@ -8,8 +8,8 @@ Serial_ Serial;
 
 using ::testing::Return;
 TEST(loop, pushed) {
-  SerialMock* serialMock = serialMockInstance();
-  EXPECT_CALL(*serialMock, println(1, 10));
-  Serial.println(1, 10);
-  releaseSerialMock();
+    SerialMock* serialMock = serialMockInstance();
+    EXPECT_CALL(*serialMock, println(1, 10));
+    Serial.println(1, 10);
+    releaseSerialMock();
 }
